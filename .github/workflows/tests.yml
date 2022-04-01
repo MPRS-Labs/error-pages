@@ -13,7 +13,7 @@ jobs: # Docs: <https://git.io/JvxXE>
     name: Gitleaks
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with: {fetch-depth: 0}
 
       - uses: zricethezav/gitleaks-action@v1 # Action page: <https://github.com/zricethezav/gitleaks-action>
@@ -22,7 +22,7 @@ jobs: # Docs: <https://git.io/JvxXE>
     name: Golang-CI (lint)
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Run linter
         uses: golangci/golangci-lint-action@v2 # Action page: <https://github.com/golangci/golangci-lint-action>
@@ -37,7 +37,7 @@ jobs: # Docs: <https://git.io/JvxXE>
       - uses: actions/setup-go@v2
         with: {go-version: 1.17}
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with: {fetch-depth: 2} # Fixes codecov error 'Issue detecting commit SHA'
 
       - name: Go modules Cache # Docs: <https://git.io/JfAKn#go---modules>
@@ -73,7 +73,7 @@ jobs: # Docs: <https://git.io/JvxXE>
       - uses: actions/setup-go@v2
         with: {go-version: 1.17}
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: gacts/github-slug@v1
         id: slug
@@ -111,7 +111,7 @@ jobs: # Docs: <https://git.io/JvxXE>
     runs-on: ubuntu-20.04
     needs: [build]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: actions/download-artifact@v2
         with:
@@ -141,7 +141,7 @@ jobs: # Docs: <https://git.io/JvxXE>
     runs-on: ubuntu-20.04
     needs: [golangci-lint, go-test]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: gacts/github-slug@v1
         id: slug
