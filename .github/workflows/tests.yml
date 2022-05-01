@@ -113,7 +113,7 @@ jobs: # Docs: <https://git.io/JvxXE>
     steps:
       - uses: actions/checkout@v2
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: error-pages-linux-amd64
           path: .artifact
@@ -167,7 +167,7 @@ jobs: # Docs: <https://git.io/JvxXE>
     runs-on: ubuntu-20.04
     needs: [docker-image]
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: docker-image
           path: .artifact
@@ -187,7 +187,7 @@ jobs: # Docs: <https://git.io/JvxXE>
     needs: [docker-image]
     timeout-minutes: 2
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: docker-image
           path: .artifact
