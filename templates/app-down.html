@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="noindex, nofollow"/>
-    <title>{{ message }}</title>
+    <title>Manutenção</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.bunny.net">
@@ -79,33 +79,9 @@
 <body>
 <main>
     <div class="content">
-        <h2 class="title" data-l10n>{{ message }}</h2>
-        <p data-l10n>{{ description }}</p>
-        <div class="subtitle if-not-found hidden">
-            <p><span data-l10n>Here's what might have happened</span>:</p>
-            <ul>
-                <li data-l10n>You may have mistyped the URL</li>
-                <li data-l10n>The site was moved</li>
-                <li data-l10n>It was never here</li>
-            </ul>
-        </div>
-        <p class="if-maybe-wrong-uri"><span data-l10n>Double-check the URL</span>. <a class="go-back hidden" data-l10n>Alternatively, go back</a></p>
-        {{ if show_details }}
-        <div class="details">
-            <p><span data-l10n>Request details</span>:</p>
-            <ul>
-                {{- if host }}<li><span><span data-l10n>Host</span>:</span> <code>{{ host }}</code></li>{{ end -}}
-                {{- if original_uri }}<li><span><span data-l10n>Original URI</span>:</span> <code>{{ original_uri }}</code></li>{{ end -}}
-                {{- if forwarded_for }}<li><span><span data-l10n>Forwarded for</span>:</span> <code>{{ forwarded_for }}</code></li>{{ end -}}
-                {{- if namespace }}<li><span><span data-l10n>Namespace</span>:</span> <code>{{ namespace }}</code></li>{{ end -}}
-                {{- if ingress_name }}<li><span><span data-l10n>Ingress name</span>:</span> <code>{{ ingress_name }}</code></li>{{ end -}}
-                {{- if service_name }}<li><span><span data-l10n>Service name</span>:</span> <code>{{ service_name }}</code></li>{{ end -}}
-                {{- if service_port }}<li><span><span data-l10n>Service port</span>:</span> <code>{{ service_port }}</code></li>{{ end -}}
-                {{- if request_id }}<li><span><span data-l10n>Request ID</span>:</span> <code>{{ request_id }}</code></li>{{ end -}}
-                <li><span><span data-l10n>Timestamp</span>:</span> <code>{{ now.Unix }}</code></li>
-            </ul>
-        </div>
-        {{ end }}
+        <h2 class="title" data-l10n>Estamos em manutenção!</h2>
+        <p data-l10n>Esse serviço está indisponível enquanto o banco de dados institucional do MPRS está sendo migrado.</p>
+        <p data-l10n><span data-l10n>Para maiores detalhes, por favor, leia o aviso completo disponível</span> <a href="https://intra.mp.rs.gov.br" data-l10n>aqui</a>.</p>
     </div>
     <div class="picture">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" x="0px" y="0px" xml:space="preserve">
@@ -159,7 +135,7 @@
             <circle class="st4" cx="257.2" cy="255.4" r="4.2"></circle>
             <line class="st16" x1="182.4" y1="284.4" x2="179" y2="229.2"></line>
             <polygon class="st17" points="191.3,144 153.6,146.3 128.7,174.8 131,212.7 159.3,238 196.9,235.6 221.8,207.2 219.5,169.2" style="fill:var(--color-bg-sign)"></polygon>
-            <text class="error-code" x="125" y="220" transform="rotate(-5)">{{ code }}</text>
+            <text class="error-code" x="145" y="220" transform="rotate(-5)">!!</text>
             <line class="st14" x1="183.2" y1="255.9" x2="175.9" y2="258.8"></line>
             <line class="st14" x1="184.7" y1="260.4" x2="175.8" y2="263"></line>
             <line class="st14" x1="185.4" y1="265.4" x2="176.9" y2="267.2"></line>
