@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/a8m/envsubst v1.4.2
-	github.com/fasthttp/router v1.5.3
+	github.com/fasthttp/router v1.5.4
 	github.com/fatih/color v1.18.0
 	github.com/kami-zh/go-capturer v0.0.0-20171211120116-e492ea43421d
 	github.com/pkg/errors v0.9.1
@@ -12,7 +12,7 @@ require (
 	github.com/prometheus/client_model v0.6.1
 	github.com/stretchr/testify v1.10.0
 	github.com/urfave/cli/v2 v2.27.5
-	github.com/valyala/fasthttp v1.57.0
+	github.com/valyala/fasthttp v1.58.0
 	go.uber.org/automaxprocs v1.6.0
 	go.uber.org/goleak v1.3.0
 	go.uber.org/zap v1.27.0
@@ -38,6 +38,6 @@ require (
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/xrash/smetrics v0.0.0-20240521201337-686a1a2994c1 // indirect
 	go.uber.org/multierr v1.10.0 // indirect
-	golang.org/x/sys v0.26.0 // indirect
+	golang.org/x/sys v0.27.0 // indirect
 	google.golang.org/protobuf v1.34.2 // indirect
 )
